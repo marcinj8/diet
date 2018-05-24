@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">.
+    <link href='scss/main.css' rel='stylesheet'>
+</head>
+
+<body>
+    <div class='container'>
+        <div class='container__form'>
+
+            <button class='calculation__button' id='calculation__buttonEvent'>New diet</button>
+            <div class='calculation__form'>
+                <input class='calculation__field' id='name' placeholder="name">
+                <select class='calculation__field' id='sex'>
+                    <option value='x'>Choose sex</option>
+                    <option value='Female'>Female</option>
+                    <option value='Male'>Male</option>
+                </select>
+                <input class='calculation__field' id='age' placeholder="age">
+                <input class='calculation__field' id='height' placeholder="height in cm">
+                <input class='calculation__field' id='weight' placeholder="weight in kg">
+                <select class='calculation__field' id='target'>
+                    <option value='x'>Choose target</option>
+                    <option value='0.85'>Reduction</option>
+                    <option value='1.15'>Build muscle</option>
+                </select>
+                <select class='calculation__field' id='liveStyle'>
+                    <option value='x'>Choose live style</option>
+                    <option value='1'>Sitting, no physical activity</option>
+                    <option value='1.2'>Sitting, physical activity on low level</option>
+                    <option value='1.4'>Non phisical work, workout two times in week</option>
+                    <option value='1.6'>Light physical work, workout 3-4 times in week</option>
+                    <option value='1.8'>Physical work, workout 5 times in week</option>
+                    <option value='2'>Hard physical work, workout everyday</option>
+                </select>
+                <select class='calculation__field' id='meals'>
+                    <option value='x'>Choose number of meals</option>
+                    <option value='3'>Three meals</option>
+                    <option value='4'>Four meals</option>
+                    <option value='5'>Five meals</option>
+                    <option value='6'>Six meals</option>
+                </select>
+            </div>
+            <button class='calculation__button' id='calculate'>Calculate</button>
+        </div>
+        <div class='container__summary' id='containerSummary'>
+            <div class='summary' id='calcSummary'>
+
+            </div>
+        </div>
+
+
+    </div>
+
+    <script src='js/main.js'></script>
+    <!-- <script src='js/object.js'></script> -->
+</body>
+
+</html>

@@ -1,0 +1,144 @@
+@import 'hovers';
+@mixin transition ($trans, $time, $style) {
+    -webkit-transition: $trans $time $style;
+    transition: $trans $time $style;
+}
+
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    border-radius: $radius;
+}
+
+* {
+    outline: none;
+    box-sizing: border-box;
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: url('../img/bg.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.container {
+    width: 100%;
+    text-align: center;
+}
+
+.container__form {
+    width: 70%;
+    margin: 0 0 0 30%;
+    text-align: right;
+    height: 600px;
+    @include transition (all,
+    1s,
+    ease-in-out);
+}
+
+.calculation__form {
+    width: 100%;
+    input {
+        height: 50px;
+        padding: 5px;
+    }
+    select {
+        height: 50px;
+    }
+}
+
+.calculation__field {
+    @include border-radius(4px);
+    display: block;
+    margin: 5px auto;
+    min-width: 120px;
+    width: 50%;
+    border: solid 3px transparent;
+    
+}
+
+.calculation__button {
+    display: block;
+    height: 50px;
+    margin: 35px auto 25px auto;
+    min-width: 100px;
+    width: 20%;
+    border-radius: 5px;
+}
+
+.container__summary {
+    background: url('../img/bg-summarybox.png');
+    height: 0px;
+}
+
+.summary {
+    @include transition (all,
+    1.5s,
+    ease-in-out);
+    @include border-radius(8px);
+    width: 100%;
+    margin: 0 auto;
+}
+
+.container__summary--error {
+    height: 170px;
+    padding: 20px;
+}
+
+.container__summary--display {
+    height: 750px;
+    padding: 20px;
+}
+
+.summary__error {
+    background: rgb(255, 0, 0);
+    margin: 30px auto;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    letter-spacing: 2px;
+    width: 60%;
+}
+
+.summary__display {
+    background: url('../img/bg_summary.jpeg');
+    background-size: cover;
+    height: 650px;
+    margin: 30px auto;
+    color: black;
+    width: 800px;
+}
+
+.summary__header {
+    width: 50%;
+    font-size: 1.1em;
+    margin: 5px auto 20px auto;
+    padding: 180px 0 0 0;
+    text-align: center;
+    border-bottom: dotted 1px black;
+}
+
+.summary__day {
+    width: 50%;
+    margin: 5px 0 40px 195px;
+    border-bottom: dashed 1px black;
+    div {
+        padding-bottom: 15px;
+    }
+}
+
+.summary__meals {
+    width: 50%;
+    margin: 5px 0 10px 195px;
+    border-bottom: solid 1px black;
+    div {
+        padding-bottom: 15px;
+    }
+}
+
+@import 'rwd';
